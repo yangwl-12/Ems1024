@@ -14,7 +14,7 @@ public class tests {
         ApplicationContext ccx = new ClassPathXmlApplicationContext("spring-core.xml");
         EmpService ee = (EmpService) ccx.getBean("empServiceImpl");
         ee.modifyOne(new Emp("102", "sssshh", 100.0, 18, new Date()));
-
+        System.out.println("123");
 
     }
 }
