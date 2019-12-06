@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yang.dao.EmpDao">
+<!--    //查询所有-->
+<select id="selectAll" resultType="Emp">
+    select * from ee_emp
+</select>
+<!--    添加-->
+    <insert id="insertOne">
+        insert into ee_emp values(ee_emp_seq.nextval,#{ee_name},#{ee_salary},#{ee_age},#{ee_date})
+    </insert>
+<!--    删除-->
+    <delete id="deleteOne" >
+        delete from ee_emp where ee_id=#{id}
+    </delete>
+<!--    更新-->
+    <update id="updateOne">
+        update ee_emp set ee_name=#{ee_name},ee_salary=#{ee_salary},ee_age=#{ee_age},ee_date=#{ee_date} where ee_id=#{ee_id}
+    </update>
+<!--    根据id查询一个-->
+    <select id="selectOneEmp" resultType="Emp">
+        select * from ee_emp where ee_id=#{id}
+    </select>
+</mapper>
