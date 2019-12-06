@@ -20,6 +20,7 @@ public class EmpController {
     public String findAll(HttpServletRequest request) {
         List<Emp> list = new ArrayList<>();
         list = empService.findtAll();
+        System.out.println(list);
         request.setAttribute("list", list);
         return "emplist";
     }
