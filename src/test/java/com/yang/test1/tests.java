@@ -15,6 +15,7 @@ public class tests {
         EmpService ee = (EmpService) ccx.getBean("empServiceImpl");
         ee.modifyOne(new Emp("102", "sssshh", 100.0, 18, new Date()));
         System.out.println("123");
+        System.out.println("345");
 
     }
 }
