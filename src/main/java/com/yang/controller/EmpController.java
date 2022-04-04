@@ -19,6 +19,7 @@ public class EmpController {
     @RequestMapping("findAll")
     public String findAll(HttpServletRequest request) {
         List<Emp> list = new ArrayList<>();
+//        22222
         list = empService.findtAll();
         request.setAttribute("list", list);
         return "emplist";
